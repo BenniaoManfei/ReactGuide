@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="resources/css/base.css">
+        <script src="resources/js/react.js"></script>
+    	<script src="resources/js/react-dom.js"></script>
+    	<script src="resources/js/browser.min.js"></script>
+    <head>
+    <body>
+        <div id="Component"></div>
+    <body>
+    <script type="text/babel">
+        var CommentBox = React.createClass({
+            render : function() {
+                return (
+                    <div className="commentBox">
+                        Hello,world!I am a commentBox.
+                    </div>
+                );
+            }
+        });
+
+
+        ReactDOM.render(
+            <CommentBox />,
+            document.getElementById("Component"),
+            function(){
+                console.info("数据加载完成");
+            }
+        )
+    </script>
+</html>

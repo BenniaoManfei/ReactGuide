@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="resources/css/base.css">
+        <script src="resources/js/react.js"></script>
+    	<script src="resources/js/react-dom.js"></script>
+        <script src="resources/js/browser.min.js"></script>
+    	<script src="js/likeButton.js"></script>
+    <head>
+    <body>
+        <div id="example"></div>
+    <body>
+    <script type="text/bable">
+
+
+    var LikeButton = React.createClass({
+        getInitialState:function(){
+            return {
+                liked:false
+            }
+        },
+        handleClick:function(){
+            this.setState(
+                {
+                    liked:!this.state.liked
+                }
+            )
+        },
+        render:function(){
+            var text = this.state.liked?"like":"haven't liked "
+            return (
+                <p onClick={this.handleClick}>
+                    you {text} this.Click to toggle.
+                </p>
+            )
+        }
+    });
+    ReactDOM.render(
+        <LikeButton />,
+        document.getElementById("example"),
+        function(){
+            console.log("数据渲染完毕");
+        }
+    );
+    </script>
+</html>
