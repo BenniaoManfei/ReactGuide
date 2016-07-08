@@ -4,5 +4,6 @@
 /*/.settings/
 .classpath
 .buildpath
+src/main/webapp/js/.module-cache
 .project
 *.class

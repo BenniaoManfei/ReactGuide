@@ -141,6 +141,9 @@
 
         var PagePanel = React.createClass({
             render : function() {
+                if(this.props.pageData == null){
+                    return "";
+                }
                 var currPage = this.props.pageData.currPage;
                 var countPage = this.props.pageData.countPage;
                 var previous;
@@ -215,6 +218,7 @@
                 }
             },
             componentDidMount:function(){//虚拟Dom渲染成真实dom后进行操作
+
                 $.ajax({
                     url:this.props.url,
                     dataType:"JSON",

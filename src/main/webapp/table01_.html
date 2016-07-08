@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="resources/bootstrap3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/bootstrap3/css/bootstrap-theme.min.css">
+        <script src="resources/bootstrap3/js/jquery-1.11.1.min.js"></script>
+        <script src="resources/js/react.js"></script>
+    	<script src="resources/js/react-dom.js"></script>
+    	<script src="js/table01_.js"></script>
+    	<script src="resources/bootstrap3/js/bootstrap.min.js"></script>
+    <head>
+    <body>
+        <div  class="container">
+            <h3>基本样式，不涉及到后台，直接使用模拟的数据</h3>
+            <div id="example" style="padding-top:20px;"></div>
+        </div>
+
+    <body>
+        <!-- 传入三个变量可以正常显示表格  -->
+    <script type="text/javascript">
+	    var header = ["#","First Name","Last Name","Username","OPT"];
+	    var data = [
+	        {
+	            id:1,
+	            firstName:"Mark",
+	            lastName:"Otto",
+	            username:"@modo",
+	            opt:[1,2]
+	        },
+	        {
+	            id:2,
+	            firstName:"Jacob",
+	            lastName:"Thornton",
+	            username:"@modo",
+	            opt:[1,2]
+	        },
+	        {
+	            id:3,
+	            firstName:"Larry",
+	            lastName:"Bird",
+	            username:"@modo",
+	            opt:[1]
+	        }
+	    ];
+	    var dataProps = ["id","firstName","lastName","username","opt"];
+	    var formData = [
+	        {
+	            placeholder:"email",
+	            id:"email",
+	            defaultValue:"987461420@qq.com"
+	
+	        },
+	        {
+	            placeholder:"pass",
+	            id:"pass",
+	            type:"password"
+	        },
+	    ];
+	    var pageData = {
+	        pageSize:10,
+	        currPage:10,
+	        countPage:10
+	    };
+        ReactDOM.render(
+            React.createElement(TablePanel, {header: header, data: data, dataProps: dataProps, formData: formData, pageData: pageData}),
+            document.getElementById("example"),
+            function(){
+                console.info("数据加载完成");
+            }
+        )
+    </script>
+</html>
